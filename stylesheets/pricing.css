@@ -1,0 +1,89 @@
+/*-------------------------Pricing section------------------------------------*/
+
+
+/*setting the bg of the packages pricing section*/
+.pricing_bg {
+    background-image: url(../images/pricing_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*setting the styles of packages section*/
+.pricing_heading {
+    font-size: 2vw;
+    text-align: center;
+}
+
+/*setting the display property of the main pricing container*/
+.price_container {
+    display: flex;
+    justify-content: center;
+}
+
+/*styling each package price box*/
+.price_box {
+    background-image: url(../images/pricebox.png);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: black;
+    border-radius: 20px;
+    width: 15vw;
+    height : 50vh;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/*styling the h2 element in the package pricing box*/
+.price_box h2 {
+    font-family: 'Ananias', Arial, sans-serif;
+    color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 2px;
+}
+
+/*styling the p element in the package pricing box*/
+.price_box p {
+    color: rgba(255, 0, 0, 0.543);
+}
+
+/*styling the ul element in the package pricing box*/
+.price_box ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/*styling the button element in the package pricing box*/
+.price_box button {
+    background-color: #4b0082;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: block; /* Ensure the button takes the full width */
+    margin: 0 auto; /* Center align the button horizontally */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 10vw;
+    height:2.3vw;
+    top: 20vw;
+    margin-left: 1.5vw;
+    position: absolute;
+}
+
+/*-------------------check----------------------------*/
+.price_box .log_to_sub_msg{
+    border: 2px solid black;
+
+    font-size: 2px;;
+
+}
+
+
+

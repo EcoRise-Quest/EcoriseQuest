@@ -1,0 +1,796 @@
+﻿/* Import the Ananias font */
+@font-face {
+    font-family: 'Ananias';
+    src: url("../fonts/Ananias.otf") format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+/* Import the bugaki font */
+
+@font-face {
+    font-family: 'Bugaki';
+    src: url("../fonts/MarkaziText-SemiBold.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Import the EB Garamond extrabold font */
+@font-face {
+    font-family: 'EB Garamond ExtraBold';
+    src: url("../fonts/EBGaramond-ExtraBoldItalic.ttf") format('truetype');
+}
+
+/*setting the body styling*/
+body {
+    color: white;
+}
+
+/*adding the bg image on the cover page*/
+.cover {
+    position: relative;
+    top: 60px;
+    background-image: url("../images/home_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 0.5vw;
+}
+
+/*----------------------Header Section--------------------------*/
+
+
+/*container for the intro quote and button*/
+.quote_btn {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 12vw;
+    font-family: 'Ananias';
+    padding-right: 10vw;
+    padding-left: 10vw;
+}
+    /*styling the p element under this class*/
+    .quote_btn p {
+        font-size: 1.7vw;
+        letter-spacing: 2px;
+    }
+/*styling the try it now button*/
+.try_btn {
+    padding: 0.4vw 1.8vw;
+    border-radius: 4px;
+    border: none;
+    background-color: #FAF3FD;
+    color: #0C1765;
+    font-size: 1vw;
+    width: 15vw;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-top: 3vw;
+    text-decoration: none;
+    z-index: 1; /* Ensure buttons appear on top of images */
+}
+
+.try_btn_container {
+    margin-top: 2.5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.try_btn:hover {
+    color: white;
+    background-color: #63327F;
+}
+
+@media only screen and (max-width: 991px) {
+    .try_btn {
+        font-size: 1.3vw;
+        padding: 0.8vw 2vw;
+    }
+}
+
+/* For phones (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .cover{
+        top:45px;
+    }
+
+    .try_btn {
+        font-size: 2.5vw;
+        width: 30vw;
+        padding: 0.1vw 3vw;
+    }
+}
+
+/*----------------------Intro Section--------------------------*/
+
+/*main container for the intro section*/
+.intro_main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+}
+/*container for the man image and intro text*/
+.intro_man_text {
+    display: flex;
+    flex-direction: row;
+}
+/*setting the width of the man image div*/
+.man {
+    width: 50%;
+}
+    /*styling the man image*/
+    .man img {
+        width: 80%;
+        margin-top: 7.7vw;
+        margin-left: 6vw;
+    }
+/*styling the intro section*/
+.intro {
+    color: black;
+    padding: 4vw 6vw 4vw 3vw;
+    width: 50%;
+    margin-left: auto;
+    margin-top: 5vw;
+}
+    /*styling the p element under intro section*/
+    .intro p {
+        margin-top: 2vw;
+        font-family: Arial, sans-serif; /* Use a common font for text */
+    }
+/*styling the layer image in the intro section*/
+.intro_layer img {
+    width: 75%;
+    padding: 0;
+    margin-top: -2vw;
+}
+
+/*----------------------Quick Challenges Section----------------------*/
+/*adding the bg color to the quick challenges section*/
+.quick_clg_bg {
+    padding: 0;
+}
+/*styling the header of the quick challenges section*/
+.quick_heading {
+    text-align: center;
+    color: #0C1765;
+    font-size: 1.8vw;
+    margin-top: 5vw;
+    width: 100%;
+    margin-bottom: 3vw;
+}
+
+.challenge_heading {
+    text-align: center;
+    color: #0C1765;
+    font-size: 1.8vw;
+    margin-top: 5vw;
+    width: 100%;
+}
+/*mqin container for the quick challenges section*/
+.moree {
+    width: 100%;
+    padding-right: 14vw;
+    margin-top: 2vw;
+    font-size: 1vw;
+}
+
+
+/*styling the more button*/
+.more_btn {
+    padding: 0.5vw 1vw;
+    background-color: #4b0082;
+    color: white;
+    width: 9vw;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-bottom: 3vw;
+    margin-left: 92%;
+    text-align: center;
+}
+
+    .more_btn:hover {
+        border: 0.1vw solid #4b0082;
+        background-color: white;
+        color: #4b0082;
+    }
+
+.moree a {
+    text-decoration: none;
+}
+
+
+/*-------------------------Pricing section------------------------------------*/
+/*adding bg image to the pricing section*/
+.pricing_bg {
+    background-image: url("../images/price/pricing_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 9vw;
+}
+/*styling the heading div of the styling section*/
+.pricing_heading {
+    font-family: 'Ananias';
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 3vw;
+}
+/*main container of the pricing section*/
+.price_container {
+    display: flex;
+    justify-content: center;
+}
+/*styling the individual pricing packages in the pricing section*/
+.price_box {
+    background-image: url("../images/price/pricebox.png");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: black;
+    border-radius: 20px;
+    width: 18vw;
+    height: 25vw;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5vw 3vw 3vw 3vw;
+    position: relative;
+}
+    /*styling the h2 element under the individual package section*/
+    .price_box h2 {
+        font-family: 'Ananias', Arial, sans-serif;
+        color: #ffffff;
+        margin-bottom: 20px;
+        font-size: 1.5vw;
+    }
+    /*styling the p element under individual package section*/
+    .price_box p {
+        color: rgba(255, 0, 0, 0.543);
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 1vw;
+    }
+    /*stylilng the ul element under the individual package section*/
+    .price_box ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 2vw;
+        color: #000000;
+        font-size: 0.9vw;
+    }
+
+    .price_box li {
+        margin-top: 0.5vw;
+    }
+/*container to center align the subscription button in the packages pricing section*/
+.sub_btn_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*styling the subscripton buttons*/
+.price_box button {
+    background-color: #4b0082;
+    color: white;
+    border: none;
+    padding: 0.7vw 0 0.7vw 0;
+    width: 10vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1vw;
+    cursor: pointer;
+    border-radius: 0.3vw;
+    position: absolute;
+    margin-left: 1.2vw;
+    top: 20vw;
+}
+
+    .price_box button:hover {
+        background-color: white;
+        color: #4b0082;
+        border: 0.1vw solid #4b0082;
+    }
+
+.price_box input {
+    background-color: #4b0082;
+    color: white;
+    border: none;
+    padding: 0.7vw 0 0.7vw 0;
+    width: 10vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1vw;
+    cursor: pointer;
+    border-radius: 0.3vw;
+    position: absolute;
+    top: 20vw;
+    margin-left: 1.2vw;
+}
+
+    .price_box input:hover {
+        background-color: white;
+        color: #4b0082;
+        border: 0.1vw solid #4b0082;
+    }
+
+
+.log_to_sub_msg {
+    border: 2px solid black;
+    font-size: 2px;
+}
+/*--------------------------doubt section---------------------------------*/
+/*styling the main container for the doubts section*/
+.doubts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    padding-bottom: 8vw;
+}
+/*styling the container for the left side elements in the doubts section*/
+.doubt_left {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vw;
+    flex: 1;
+}
+/*styling the individual doubts continers*/
+.doubt_quest {
+    font-family: 'Markazi Text', Arial, sans-serif;
+    font-size: 2vw;
+    color: black;
+    width: 48vw; /* Adjust the width to take up about half of the container */
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 2vw;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 8vw;
+    margin-top: 0;
+    margin-right: 5vw;
+    margin-bottom: 1.5vw;
+    border-radius: 1.5vw;
+    height: 10vw;
+}
+    /*styling the images in the individual doubt containers*/
+    .doubt_quest img {
+        height: 7vw;
+        margin-right: 2vw;
+    }
+/*styling the text content in the individual doubts containers*/
+.text_content {
+    display: flex;
+    flex-direction: column;
+}
+/*styling the h2 elements under the doubts container*/
+.doubt_quest h2 {
+    font-family: 'Bugaki';
+    font-size: 1.7vw;
+    margin-bottom: 0;
+}
+/*styling the p element under the doubts container*/
+.doubt_quest p {
+    font-size: 0.9vw;
+}
+/*styling the container for the elements on the right side of the doubts section*/
+.doubt_right {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    /*margin-left: 3vw; Unnecessary stuff*/
+    width: 45%;
+    padding-top: 5vw;
+    flex: 2;
+}
+/*styling the container for the doubt heading*/
+.doubt_head h1 {
+    font-family: 'EB Garamond ExtraBold';
+    font-size: 6vw;
+    color: navy;
+    margin-top: 0;
+}
+
+/*container the container that contains the doubts heading and lamp image*/
+.doubtHead_container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    padding-right: 0;
+}
+/*styling div containing the lamp image*/
+.doubt_lamp {
+    margin-bottom: 0;
+    height: 12vw;
+}
+    /*styling the lamp image*/
+    .doubt_lamp img {
+        width: 100%;
+        height: 140%;
+    }
+/*styling the doubt heading container*/
+.doubts_heading {
+    font-family: 'EB Garamond ExtraBold';
+    margin-top: 8vw;
+    text-align: left;
+    flex: 1;
+    margin-right: 10vw;
+    margin-top: 0;
+}
+    /*styling the doubt heading*/
+    .doubts_heading h1 {
+        margin-top: 0;
+    }
+
+/*-----------------clouds------------------*/
+.clouds {
+    width: 100%;
+    background-image: url("../images/clouds.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+/*------------------------footer section---------------------------------*/
+/*styling the container for the footer section*/
+.footer {
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/footer/footer_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0 4.5vw 270px 4.5vw;
+}
+/*setting the flex property to the footer section*/
+.footer_txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*styling the h1 element in the footer*/
+.footer > .footer_txt > h1 {
+    margin-top: 5px;
+    text-align: center;
+    padding: 20px;
+    color: purple;
+}
+
+.footer_txt h2 {
+    font-family: 'Markazi Text', Arial, sans-serif;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: grey;
+    font-size: 18px;
+}
+/*styling the menu in the footer section*/
+.menu-footer {
+    font-family: 'Markazi Text', Arial, sans-serif;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+/*styling each menu item*/
+.footer-menu-item {
+    color: purple;
+    text-decoration: none;
+}
+    /*adding hover effect to the menu item*/
+    .footer-menu-item:hover {
+        text-decoration: underline;
+    }
+/*styling the class for the social media section in the footer*/
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    /*styling the anchor tag and images under the social media section*/
+    .social-media a img {
+        transition: transform 0.3s ease; /* Smooth transformation */
+    }
+    /*adding the hover effect to the anchor tag and images under the social media section*/
+    .social-media a:hover img {
+        transform: scale(1.2); /* Scale the image up to 120% when hovered */
+    }
+
+
+/*---------------------------MEDIA QUERIES---------------------------------------*/
+
+/*TABLET VERSION*/
+
+@media only screen and (max-width: 991px) {
+    .intro {
+        margin-top: 0.2vw;
+    }
+
+        .intro p {
+            font-size: 1.8vw;
+        }
+
+    .man {
+        width: 50%;
+    }
+        /*styling the man image*/
+        .man img {
+            width: 100%;
+        }
+    /*quick challenges section*/
+    .box {
+        flex-basis: calc(33.33% - 10px); /* 3 boxes in a row on tablets */
+        height: 200px; /* Adjust height for tablets */
+    }
+    /*pricing section*/
+    .pricing_heading {
+        font-size: 1.8vw;
+    }
+    /*changing width and height of individual price boxes*/
+    .price_box {
+        width: 25vw;
+        height: 35vw;
+        border: none
+    }
+        /*changing the font size of the ul element under individual price boxes*/
+        .price_box ul {
+            font-size: 1.2vw;
+        }
+
+        .price_box li {
+            margin-top: 0.5vw;
+        }
+        /*changing the font size of the p element under individual price boxes*/
+        .price_box p {
+            font-size: 1.4vw;
+        }
+        /*changing the font size of the h2 element under individual price boxes*/
+        .price_box h2 {
+            font-size: 2.5vw;
+            margin-top: 6px;
+        }
+        /*changing the font,position and width of the ul button under individual price boxes*/
+        .price_box button {
+            font-size: 1.3vw;
+            top: 29vw;
+            width: 14vw;
+            margin-left: 2.8vw;
+        }
+
+        .price_box input {
+            font-size: 1.3vw;
+            top: 29vw;
+            width: 14vw;
+            margin-left: 2.8vw;
+        }
+    /*doubt section*/
+    /*changing the flex direction of the doubts container*/
+    .doubts {
+        flex-direction: column;
+        align-items: center;
+    }
+    /*changing the order of the left side container of the doubts section*/
+    .doubt_left {
+        order: 2; /* Move doubt_left to the bottom */
+    }
+    /*changing the order of the left side container of the doubts section*/
+    .doubt_right {
+        order: 1; /* Move doubt_right to the top */
+    }
+    /*changing the height and width of the individual doubts container*/
+    .doubt_quest {
+        width: 60vw;
+        height: 15vw;
+    }
+        /*changing the height of the image in individual doubts container*/
+        .doubt_quest img {
+            height: 12vw;
+        }
+        /*changing the font size of the h2 element of the individual doubts container*/
+        .doubt_quest h2 {
+            font-size: 2.0vw;
+        }
+        /*changing the font size of the p element of the individual doubts container*/
+        .doubt_quest p {
+            font-size: 1.1vw;
+        }
+    /*changing the height and padding of the right side container of the doubts section*/
+    .doubt_right {
+        width: 100%;
+        padding-top: 0;
+    }
+    /*center aligning the doubts heading*/
+    .doubt_head {
+        text-align: center;
+    }
+    /*changing the width of the lamp image*/
+    .doubt_lamp img {
+        width: 100%;
+    }
+    /*changing the padding and height of the container containg the lamp image*/
+    .doubt_lamp {
+        padding-left: 40vw;
+        padding-right: 0;
+        height: 17vw;
+    }
+    /*mqin container for the quick challenges section*/
+    .moree {
+        width: 100%;
+        padding-right: 0;
+        margin-top: 2vw;
+        font-size: 1.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .more_btn {
+        margin-left: 0;
+    }
+}
+
+/* MOBILE VERSION*/
+
+@media only screen and (max-width: 767px) {
+    .quote_btn {
+        padding-right: 10vw;
+        padding-left: 10vw;
+    }
+
+    .man {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+        /*styling the man image*/
+        .man img {
+            width: 100%;
+            margin: 0;
+        }
+
+    /*changing the font size of the quote and button text on the intro cover page*/
+    .quote_btn p {
+        font-size: 3vw;
+    }
+    /*changing the width of the try it now button*/
+
+    /*changing the flex direction of the container container the man image and the intro text*/
+    .intro_man_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    /*center aligning man image*/
+    .man {
+        align-items: center;
+        justify-content: center;
+        margin-top: -2vw;
+    }
+        /*changing the width of the man image*/
+        .man img {
+            width: 75%;
+        }
+    /*center aligning the intro section container*/
+    .intro {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5vw;
+        width: 80%;
+        margin-left: 0;
+    }
+        /*changing the font size of the p element in the intro section*/
+        .intro p {
+            font-size: 2.5vw;
+        }
+    /*pricing section*/
+    /*changing the flex direction of the the pricing section main container*/
+    .price_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    /*changing the width, height, margins and border-radius of the individual pricing box*/
+    .price_box {
+        width: 70vw;
+        height: 40vw;
+        margin-bottom: 2vw;
+        border-radius: 2vw;
+        background-image: url("../images/price/mobprice_box.png");
+    }
+
+    /*changin the font size of the h1 element in the pricing section*/
+    .pricing_heading h1 {
+        font-size: 5vw;
+        margin-bottom: 6vw;
+    }
+    /*changin the font size and margin of the h2 element in the pricing section*/
+    .price_box h2 {
+        margin-top: 4vw;
+        font-size: 3vw;
+    }
+    /*changin the font size, margins and text alignment of the p element in the pricing section*/
+    .price_box p {
+        font-size: 2.5vw;
+        text-align: center;
+        margin-top: 2vw;
+        margin-bottom: 0.2vw;
+    }
+    /*changin the font size and text alignment of the ul element in the pricing section*/
+    .price_box ul {
+        text-align: center;
+        font-size: 2.5vw;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    /*changin the styling of the button element in the pricing section*/
+    .price_box button {
+        text-align: center;
+        font-size: 2vw;
+        width: 20vw;
+        top: 33vw;
+        margin-left: 22.5vw;
+    }
+
+    .price_box input {
+        text-align: center;
+        font-size: 2vw;
+        width: 20vw;
+        top: 33vw;
+        margin-left: 22.5vw;
+    }
+
+    /*changin the margin and padding of the main conatiner in the pricing section*/
+    .pricing_bg {
+        margin-top: 4vw;
+        padding-top: 25vw;
+    }
+    /*doubt section*/
+
+
+    /*changin the height and width of the individual doubts containers*/
+    .doubt_quest {
+        width: 90vw;
+        height: 60vw;
+        margin: 0;
+    }
+        /*changin the height of the images in the individual doubts containers*/
+        .doubt_quest img {
+            height: 30vw;
+        }
+        /*changin the font-size of the h2 element in the individual doubts containers*/
+        .doubt_quest h2 {
+            font-size: 4.7vw;
+        }
+        /*changin the font-size of the p element in the individual doubts containers*/
+        .doubt_quest p {
+            font-size: 2.5vw;
+        }
+
+    .moree {
+        margin-top: 5.5vw;
+        font-size: 0.7rem;
+    }
+
+    .more_btn {
+        padding: 1vw 1.5vw;
+        width: 13vw;
+    }
+
+    footer {
+        padding-bottom: 150px;
+    }
+}

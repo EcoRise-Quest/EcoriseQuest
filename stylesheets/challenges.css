@@ -1,0 +1,439 @@
+/* Import the Ananias font */
+@font-face {
+    font-family: 'Ananias';
+    src: url(fonts/Ananias.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bugaki';
+    src: url(fonts/Bugaki.ttf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    background-color: #FAF3FD;
+    font-family: 'Ananias', Arial, sans-serif;
+    /* Other body styles */
+}
+
+    body.freeze-scroll {
+        overflow: hidden; /* Freeze background scroll */
+    }
+
+/*----------------------Quick Challenges Section----------------------*/
+
+.quick_clg_bg {
+    background-color: #FAF3FD;
+}
+
+.qk_ch_heading {
+    text-align: center;
+    color: #0C1765;
+    font-size: 1.8vw;
+    margin-top: 5vw;
+}
+
+.points_text {
+    font-size: 0.5vw;
+    font-family: Arial, sans-serif; /* Use a common font for text */
+    margin-left: 17vw;
+    color: grey;
+    margin-top: 5vw;
+}
+/* For tablets (768px - 991px) */
+@media only screen and (max-width: 991px) {
+    .points_text {
+        font-size: 1vw;
+        margin-left: 11vw;
+    }
+}
+
+/* For phones (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .points_text {
+        font-size: 1.5vw;
+        margin-left: 11vw;
+    }
+}
+
+.challenge_heading {
+    font-family: Arial, sans-serif; /* Use a common font for text */
+    color: #0C1765;
+    font-size: 1vw;
+    margin-top: 85px;
+    margin-left: 17vw;
+}
+
+/* For tablets (768px - 991px) */
+@media only screen and (max-width: 991px) {
+    .challenge_heading {
+        font-size: 1.5vw;
+        margin-left: 11vw;
+    }
+}
+
+/* For phones (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .challenge_heading {
+        text-align: center;
+        margin-top: 60px;
+        font-size: 2vw;
+        margin-left: 0;
+    }
+}
+
+.ch_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10vw;
+}
+
+    .ch_container img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+.box {
+    flex: 0 1 calc(13.5% - 10px); /* 6 boxes in a row on desktop */
+    height: 17vw; /* Set height for vertical rectangles */
+    margin: 1vw 0.5vw;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    border-radius: 8px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(250,243,253,1) 100%);
+}
+
+/* For tablets (768px - 991px) */
+@media only screen and (max-width: 991px) {
+    .box {
+        flex-basis: calc(33.33% - 6vw); /* 3 boxes in a row on tablets */
+        height: 34.5vw; /* Adjust height for tablets */
+    }
+}
+
+/* For phones (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .box {
+        flex-basis: calc(50% - 12vw); /* 2 boxes in a row on phones */
+        height: 46vw; /* Adjust height for tablets */
+    }
+}
+
+/*detail button*/
+.detail_btn {
+    padding: 0.1vw 1.5vw;
+    border-radius: 4px;
+    border: none;
+    background-color: transparent;
+    color: #0C1765;
+    font-size: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    position: absolute; /* Ensure absolute positioning */
+    top: 15.3vw; /* Center button vertically */
+    left: 50%; /* Center button horizontally */
+    transform: translate(-50%, -50%); /* Center button */
+    transition: all .25s;
+    z-index: 1; /* Ensure buttons appear on top of images */
+}
+
+.details button:hover {
+    letter-spacing: 0.2vw;
+    border: 0.1px solid grey;
+}
+
+@media only screen and (max-width: 991px) {
+    .detail_btn {
+        top: 31vw; /* Center button vertically */
+        font-size: 1.7vw;
+        padding: 0.1vw 2vw;
+    }
+}
+
+/* For phones (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .detail_btn {
+        top: 41.5vw; /* Center button vertically */
+        font-size: 2vw;
+        padding: 0.1vw 3vw;
+    }
+}
+
+/*more button hover effect*/
+.more button {
+    display: block;
+    font-size: 1vw;
+    color: #333;
+    border: 2px solid black;
+    padding: 0.2vw 1vw;
+    letter-spacing: 2px;
+    transition: all .25s;
+    font-family: 'Ananias', Arial, sans-serif;
+    border-radius: 0.4vw;
+    background-color: white;
+    margin: 5vw 15vw 10vw auto;
+}
+
+    .more button:hover {
+        letter-spacing: 0.5vw;
+        border: 2px solid #0C1765;
+        background-color: #0C1765;
+        color: white;
+    }
+
+.container {
+    position: relative; /* Ensure relative positioning for z-index */
+    z-index: 1; /* Ensure the container is above the blurred background */
+}
+
+.ch_img {
+    display: none; /* Initially hide all challenge images */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure it appears above other content */
+    background-color: rgba(255, 255, 255, 0.9); /* Add background with opacity */
+    padding: 1rem;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+    .ch_img img {
+        max-width: 100%;
+        height: auto;
+        display: block; /* Ensure image behaves as block element */
+        margin: 0 auto; /* Center image horizontally */
+    }
+
+.close_btn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Blur effect for the background */
+.blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    filter: blur(5px); /* Adjust the blur effect as needed */
+    z-index: 999; /* Ensure it appears below the challenge images */
+    display: none; /* Initially hidden */
+}
+
+.sub-blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    filter: blur(5px); /* Adjust the blur effect as needed */
+    z-index: 999; /* Ensure it appears below the challenge images */
+    display: none; /* Initially hidden */
+}
+
+
+/*sign up pop up dialog box*/
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure it appears above other content */
+    background-color: rgb(255, 255, 255); /* Add background with opacity */
+    padding: 3vw;
+    max-width: 80%;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    font-family: Arial, sans-serif; /* Use a common font for text */
+}
+
+    .popup-container h2 {
+        font-weight: bold;
+        margin-bottom: 0.5vw;
+    }
+
+    .popup-container h2 i{
+        color: #e08a26;
+    }
+
+    .popup-container p {
+        font-family: Arial, sans-serif;
+    }
+
+    .popup-container > .close-btn {
+        position: absolute;
+        top: 0.5rem;
+        right: 1.5rem;
+        padding: 0;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #000; /* Adjust the color as needed */
+    }
+
+
+.signUp_close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+    .signUp_close-btn:hover {
+        background-color: #eee;
+    }
+
+.signup-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #63327F;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+    .signup-btn:hover {
+        background-color: #0056b3;
+    }
+
+#subscribePopup {
+    display: none;
+}
+
+/*----------------amazon affiliation links styling-------------------*/
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 3vw;
+    height: auto;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.image-section {
+    padding: 1vw;
+    width: 30%;
+}
+
+.product {
+    text-align: center;
+    font-size: 1vw;
+    width: 40%;
+    margin: 0;
+}
+
+.pro {
+    padding: 2vw;
+    font-size: 1vw;
+    width: 70%;
+    margin: 0;
+}
+
+.button {
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1vw;
+    padding-bottom: 1vw;
+}
+
+.check-price {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 1vw;
+    background-color: red;
+    border-radius: 1vw;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    width: 9vw;
+    justify-content: center;
+    align-items: center;
+}
+
+    .check-price:hover {
+        background-color: #fde504; /* Change the background color on hover */
+        color: black; /* Change the text color on hover */
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2); /* Increase the shadow on hover */
+    }
+
+
+@media only screen and (max-width: 767px) {
+    .product-card {
+        width: 90%;
+        height: auto; /* Adjust height based on content */
+        margin: 5vw; /* Reduce margin for smaller screens */
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .content-section {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .imge {
+        width: 20vw;
+        height: 24vh;
+    }
+}
+
+/* For tablets (768px - 992px) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .product-card {
+        width: 90%;
+        margin: 5vw; /* Reduce margin for medium screens */
+    }
+
+    .product {
+        font-size: 1vw;
+    }
+
+    .details {
+        font-size: 1vw;
+    }
+
+    .button {
+        font-size: 1vw;
+    }
+
+    .imge {
+        width: 20vw;
+        height: 26vh;
+    }
+}

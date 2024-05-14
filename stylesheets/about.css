@@ -1,0 +1,314 @@
+/* Import the Ananias font */
+@font-face {
+    font-family: 'Ananias';
+    src: url("../fonts/Ananias.otf") format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Serif';
+    src: url(fonts/NotoSerif-VariableFont_wdth\,wght.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url(fonts/Inter-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sauce';
+    src: url(fonts/open-sauce.sans-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.about h1, h2{
+    font-family: 'Noto Serif', sans-serif;
+}
+
+.cover {
+    position: relative;
+    background-image: url("../images/about/about-bg.png");
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+/*For phones (upto 767px)*/
+@media only screen and (max-width: 767px){
+    .cover{
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+}
+.about{
+    position: relative;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255,255,255,0.65);
+    color: black;
+    width: 37vw;
+    margin-top: 2vh;
+    margin-left: 7vw;
+    padding: 2vw 3vw;
+}
+
+/*For tablet*/
+@media only screen and (max-width: 991px){
+    .about{
+        width: 55vw;   
+    }
+}
+/*For phones (upto 767px)*/
+@media only screen and (max-width: 767px){
+    .about{
+        width: 68vw;
+        height: fit-content;
+        margin: auto;
+    }
+}
+.about h1{
+    margin: 2vh 0 1vh 0;
+    font-size: 2.5rem;
+    font-family: 'Noto Serif';
+
+}
+.about h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Noto Serif';
+}
+.about p{
+    padding: 2.5vh 0;
+    line-height: 1.5vw;
+    font-size: 1rem;
+}
+
+/*For tablet*/
+@media only screen and (max-width: 991px){
+    .about h1{
+        font-size: 3.0vw;
+    }
+    .about h2{
+        font-size: 2.5vw;
+    }
+    .about p{
+        font-size: 1.5vw;
+        line-height: 24px;
+    }
+}
+/*For phones (upto 767px)*/
+@media only screen and (max-width: 767px){
+    .about h1 {
+        font-size: 20px;
+    }
+
+    .about h2 {
+        font-size: 16px;
+    }
+
+    .about p {
+        font-size: 10px;
+        margin-top: 0.5vw;
+        line-height: 3.5vw;
+        padding: 1vh 0;
+    }
+}
+
+.more{
+    padding-top: 4vw;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: #fff;
+    padding-bottom: 6vw;
+}
+
+
+.more h1{
+    font-family: 'Noto Serif', serif;
+    text-align: center;
+    margin-top: 5vw;
+}
+
+.us{
+    display: flex;
+    flex-direction: row;
+    padding: 1.5vw;
+}
+
+/*styling the h1 element in the footer*/
+.footer > .footer_txt > h1 {
+    margin-top: 5px;
+    text-align: center;
+    padding: 20px;
+    color: purple;
+    font-family: 'Ananias';
+}
+
+/*For phones (upto 767px)*/
+@media only screen and (max-width: 767px){
+    .more {
+        padding-top: 7.5vw;
+        padding-bottom: 6vw;
+    }
+        .more h1 {
+            margin-top: 6vw;
+            font-size: 20px;
+        }
+
+    .us{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.section{
+    padding: 2vw 3vw;
+    width: 45%;
+}
+/*For phones (upto 767px)*/
+@media only screen and (max-width: 767px){
+    .section{
+        width: 70%;
+        text-align: center;
+    }
+
+        .section h2 {
+            padding: 1vh 0;
+            font-size: 16px;
+        }
+
+        .section p {
+            font-size: 13px;
+            text-align: justify;
+            line-height: 20px;
+        }
+}
+
+
+.section h2{
+    padding: 3vh 0;
+    font-family: 'Noto Serif', serif;
+    color: #9F63C2;
+}
+
+.section p{
+    font-family: 'Inter';
+}
+
+.join{
+    background-color: #FAF3FD;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    padding: 10vw 5vw;
+    justify-content: space-between;
+}
+/*For tablet*/
+@media only screen and (max-width: 991px){
+    .join{
+        flex-direction: column;
+    }
+}
+/*For phones (upto 767px)*/
+@media only screen and (max-width: 767px){
+    .join {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.title{
+    text-transform: capitalize;
+    width: 45%;
+    text-align: left;
+    font-family: 'Noto Serif', serif;
+}
+
+.title hr{
+    margin: 4vh 0;
+    border: none;
+    width: 90%;
+    height: 1px;
+    background-color: purple;
+}
+/*For tablet*/
+@media only screen and (max-width: 991px){
+    .title{
+        width: 70%;
+    }
+}
+/*For phones (upto 767px)*/
+@media only screen and (max-width: 767px){
+    .title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .title h2 {
+        font-size: 16px;
+    }
+        .title hr {
+            margin: 3vh auto;
+        }
+}
+
+.content{
+    font-family: 'Open Sauce', sans-serif;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+/*For tablet*/
+@media only screen and (max-width: 991px){
+    .content{
+        flex-direction: row;
+        width: 100%;
+    }
+}
+/*For phones (upto 767px)*/
+@media only screen and (max-width: 767px){
+    .content{
+        flex-direction: column;
+    }
+}
+
+.part{
+    display: flex;
+    flex-direction: column;
+    margin: 0vw 3vw;
+}
+.part h3{
+    color:  #9F63C2;
+    margin: 0 0 2vh 0;
+}
+
+.part p{
+    padding: 0 0 3vh 0;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+/*For phones (upto 767px)*/
+@media only screen and (max-width: 767px) {
+    .part h3 {
+        font-size: 15px;
+        margin: 0 0 2vh 0;
+    }
+
+    .part p {
+        padding: 0 0 3vh 0;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
